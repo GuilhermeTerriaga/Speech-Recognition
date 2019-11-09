@@ -1,4 +1,5 @@
-﻿import sys
+﻿#primeiro programa em pyhton
+import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 import pyaudio
