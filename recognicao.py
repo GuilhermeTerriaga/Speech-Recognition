@@ -1,13 +1,11 @@
-﻿#primeiro programa em pyhton
-import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
-import pyaudio
+﻿import pyaudio
 import speech_recognition as sr
 
 def arquivoParaTexto():
+	print("Olá, seja bem vindo ao decodificador de audio para texto!\n\nO arquivo deve estar no formato FLAC!")
+	path = input("Insira o caminho completo para o arquivo de áudio ")
 
-	arch = sr.AudioFile('arq22.flac')
+	arch = sr.AudioFile(path)
 	r = sr.Recognizer()
 	with arch as source:
 		print("ouvindo o arquivo!")
@@ -19,13 +17,13 @@ def arquivoParaTexto():
 		
 		frase = r.recognize_google(audio,language='pt-BR')
 		file = open("file.txt", "w") 
-		file.write(frase) 
+		file.write(frase + "\n") 
 		file.close()
-		print("ok, criei um arquivo .txt, olha lá!")
+		print("ok, criei um arquivo com nome de file.txt, olha lá!\n \nCodado por Guilherme Terriaga")
 		
 		
 	except sr.UnknownValueError:
-		print("can you repeat please?")
+		print("poderia repetir por favor?")
 
 	return frase
 	
