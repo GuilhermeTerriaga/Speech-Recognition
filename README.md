@@ -1,11 +1,10 @@
 # Speech-Recognition
 
 
-Recognição de voz para texto, usando para aprendizado de python:) 
-o programa pega o arquivo de audio e transcreve para um txt.
+Recognição de voz para texto!
 
+Para rodar instale as dependencias:
 
-
-
-
-
+- pip3 install SpeechRecognition
+- pip3 install pyaudio
+- portaudio -> http://www.portaudio.com/
